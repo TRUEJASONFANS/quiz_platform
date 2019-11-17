@@ -1,2 +1,2 @@
 # quiz_platform
-a plat form for quiz
+a platform for quiz in interview or self-study.
