@@ -1,4 +1,4 @@
-package com.example.demo;
+package org.zhxie.quizplatform;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
