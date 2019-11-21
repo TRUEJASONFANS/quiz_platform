@@ -1,0 +1,1 @@
+export const severUrl = "localhost:8080/quizPlaform";
