@@ -1,24 +1,20 @@
 import React from 'react';
 import { Input, Row, Col, Button } from 'antd';
-import moment from 'moment';
 import styles from "./index.css"
 import { connect } from 'dva';
 const { TextArea } = Input;
 
-@connect(({ problemModel, loading, dispatch }) => ({
+@connect(({problemModel, loading, dispatch }) => ({
     problemModel,
     loading,
+    dispatch
   }))
-export default class AddQuestion extends React.Component {
-
-    dispatch:Function = ()=>{};
-    constructor() {
-        super({});
-        this.dispatch = this.props.dispatch;
-    }
+class AddQuestionBoard extends React.Component {
 
     render() {
-        return <>
+        const { problemModel, loading , dispatch} = this.props
+
+        return (<>
             <div>
 
                 <div style={{ height: "100px" }}>
@@ -44,8 +40,8 @@ export default class AddQuestion extends React.Component {
                 </div>
                 <div>
                     <Row>
-                        <Col offset = {21}>
-                            <Button onClick={this.dispatch({
+                        <Col offset={21}>
+                            <Button onClick={()=>dispatch({
                                 type:"problemModel/addQuestion",
                                 payload: {}
                             })}>Add</Button>
@@ -53,6 +49,7 @@ export default class AddQuestion extends React.Component {
                     </Row>
                 </div>
             </div>
-        </>
+        </>)
     }
 }
+export default AddQuestionBoard

@@ -26,6 +26,12 @@ const config: IConfig =  {
       },
     }],
   ],
+  proxy: {
+    '/quiz/api/questions': {
+      target:'http://localhost:8080/',
+      changeOrigin: true,
+    }
+  }
 }
 
 export default config;
